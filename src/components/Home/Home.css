@@ -1,0 +1,13 @@
+.home-container {
+    height: 600vh; /* Height of the page */
+    width: 100vw; /* Half the width of the screen */
+    background-color: rgba(12, 12, 29, 0.8); /* Matching the navbar color */
+    margin: 0 auto;
+    padding-top: 100px; /* Center the container horizontally */
+  }
+  .home-container h1 {
+    text-align: center;
+    color: white;
+    
+    font-size: 74px;
+  }
