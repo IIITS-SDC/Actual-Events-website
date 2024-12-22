@@ -1,0 +1,88 @@
+{
+    "clubs": [
+      {
+        "id": 1,
+        "name": "MLSA Chapter",
+        "description": "Microsoft Learn Student Ambassador club at DYPCET",
+        "fullDescription": "A community of student leaders who are passionate about sharing technology with their peers. We organize workshops, hackathons, and mentoring sessions to help students learn new technologies and build their careers in tech.",
+        "members": 3,
+        "type": "technical",
+        "isActive": true,
+        "leadName": "John Doe",
+        "leadEmail": "john.doe@dypcet.edu",
+        "socialLinks": {
+          "instagram": "mlsa_dypcet",
+          "linkedin": "mlsa-dypcet"
+        },
+        "events": [
+          "Tech Talk 2024",
+          "Hackathon Spring",
+          "Cloud Workshop"
+        ],
+        "achievements": [
+          "Best Technical Club 2023",
+          "Organized 10+ successful workshops"
+        ],
+        "images": [
+          "/api/placeholder/400/300",
+          "/api/placeholder/400/300"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "GSSOC",
+        "description": "An Open source club for Beginners",
+        "fullDescription": "Learn and contribute to open source projects in a supportive environment. Our club focuses on helping students understand Git, GitHub, and the open-source ecosystem through hands-on projects and mentorship.",
+        "members": 0,
+        "type": "technical",
+        "isActive": true,
+        "leadName": "Jane Smith",
+        "leadEmail": "jane.smith@dypcet.edu",
+        "socialLinks": {
+          "instagram": "gssoc_dypcet",
+          "github": "gssoc-dypcet"
+        },
+        "events": [
+          "Code Sprint",
+          "Git Workshop",
+          "Hacktoberfest"
+        ],
+        "achievements": [
+          "100+ Pull Requests Merged",
+          "Best Open Source Contribution 2023"
+        ],
+        "images": [
+          "/api/placeholder/400/300",
+          "/api/placeholder/400/300"
+        ]
+      },
+      {
+        "id": 3,
+        "name": "Cultural Club",
+        "description": "Explore and celebrate diverse cultures",
+        "fullDescription": "A vibrant community celebrating diversity through arts, music, and cultural events. We organize festivals, performances, and workshops that showcase the rich cultural heritage of our students.",
+        "members": 15,
+        "type": "non-technical",
+        "isActive": true,
+        "leadName": "Sarah Johnson",
+        "leadEmail": "sarah.johnson@dypcet.edu",
+        "socialLinks": {
+          "instagram": "cultural_dypcet",
+          "facebook": "culturalclub_dypcet"
+        },
+        "events": [
+          "Annual Cultural Fest",
+          "Dance Workshop",
+          "Art Exhibition"
+        ],
+        "achievements": [
+          "Best Cultural Performance 2023",
+          "Most Active Club Award"
+        ],
+        "images": [
+          "/api/placeholder/400/300",
+          "/api/placeholder/400/300"
+        ]
+      }
+    ]
+  }
