@@ -1,88 +1,144 @@
 {
-    "clubs": [
-      {
-        "id": 1,
-        "name": "MLSA Chapter",
-        "description": "Microsoft Learn Student Ambassador club at DYPCET",
-        "fullDescription": "A community of student leaders who are passionate about sharing technology with their peers. We organize workshops, hackathons, and mentoring sessions to help students learn new technologies and build their careers in tech.",
-        "members": 3,
-        "type": "technical",
-        "isActive": true,
-        "leadName": "John Doe",
-        "leadEmail": "john.doe@dypcet.edu",
-        "socialLinks": {
-          "instagram": "mlsa_dypcet",
-          "linkedin": "mlsa-dypcet"
-        },
-        "events": [
-          "Tech Talk 2024",
-          "Hackathon Spring",
-          "Cloud Workshop"
-        ],
-        "achievements": [
-          "Best Technical Club 2023",
-          "Organized 10+ successful workshops"
-        ],
-        "images": [
-          "/api/placeholder/400/300",
-          "/api/placeholder/400/300"
-        ]
+  "clubs": [
+    {
+      "id": 1,
+      "name": "MLSA Chapter",
+      "description": "Microsoft Learn Student Ambassador club at DYPCET",
+      "fullDescription": "A community of student leaders who are passionate about sharing technology with their peers. We organize workshops, hackathons, and mentoring sessions to help students learn new technologies and build their careers in tech.",
+      "members": 3,
+      "type": "technical",
+      "isActive": true,
+      "leadName": "John Doe",
+      "leadEmail": "john.doe@dypcet.edu",
+      "socialLinks": {
+        "instagram": "mlsa_dypcet",
+        "linkedin": "mlsa-dypcet"
       },
-      {
-        "id": 2,
-        "name": "GSSOC",
-        "description": "An Open source club for Beginners",
-        "fullDescription": "Learn and contribute to open source projects in a supportive environment. Our club focuses on helping students understand Git, GitHub, and the open-source ecosystem through hands-on projects and mentorship.",
-        "members": 0,
-        "type": "technical",
-        "isActive": true,
-        "leadName": "Jane Smith",
-        "leadEmail": "jane.smith@dypcet.edu",
-        "socialLinks": {
-          "instagram": "gssoc_dypcet",
-          "github": "gssoc-dypcet"
-        },
-        "events": [
-          "Code Sprint",
-          "Git Workshop",
-          "Hacktoberfest"
-        ],
-        "achievements": [
-          "100+ Pull Requests Merged",
-          "Best Open Source Contribution 2023"
-        ],
-        "images": [
-          "/api/placeholder/400/300",
-          "/api/placeholder/400/300"
-        ]
+      "events": [
+        "Tech Talk 2024",
+        "Hackathon Spring",
+        "Cloud Workshop"
+      ],
+      "achievements": [
+        "Best Technical Club 2023",
+        "Organized 10+ successful workshops"
+      ],
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "GSSOC",
+      "description": "An Open source club for Beginners",
+      "fullDescription": "Learn and contribute to open source projects in a supportive environment. Our club focuses on helping students understand Git, GitHub, and the open-source ecosystem through hands-on projects and mentorship.",
+      "members": 0,
+      "type": "technical",
+      "isActive": true,
+      "leadName": "Jane Smith",
+      "leadEmail": "jane.smith@dypcet.edu",
+      "socialLinks": {
+        "instagram": "gssoc_dypcet",
+        "github": "gssoc-dypcet"
       },
-      {
-        "id": 3,
-        "name": "Cultural Club",
-        "description": "Explore and celebrate diverse cultures",
-        "fullDescription": "A vibrant community celebrating diversity through arts, music, and cultural events. We organize festivals, performances, and workshops that showcase the rich cultural heritage of our students.",
-        "members": 15,
-        "type": "non-technical",
-        "isActive": true,
-        "leadName": "Sarah Johnson",
-        "leadEmail": "sarah.johnson@dypcet.edu",
-        "socialLinks": {
-          "instagram": "cultural_dypcet",
-          "facebook": "culturalclub_dypcet"
-        },
-        "events": [
-          "Annual Cultural Fest",
-          "Dance Workshop",
-          "Art Exhibition"
-        ],
-        "achievements": [
-          "Best Cultural Performance 2023",
-          "Most Active Club Award"
-        ],
-        "images": [
-          "/api/placeholder/400/300",
-          "/api/placeholder/400/300"
-        ]
-      }
-    ]
-  }
+      "events": [
+        "Code Sprint",
+        "Git Workshop",
+        "Hacktoberfest"
+      ],
+      "achievements": [
+        "100+ Pull Requests Merged",
+        "Best Open Source Contribution 2023"
+      ],
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Cultural Club",
+      "description": "Explore and celebrate diverse cultures",
+      "fullDescription": "A vibrant community celebrating diversity through arts, music, and cultural events. We organize festivals, performances, and workshops that showcase the rich cultural heritage of our students.",
+      "members": 15,
+      "type": "non-technical",
+      "isActive": true,
+      "leadName": "Sarah Johnson",
+      "leadEmail": "sarah.johnson@dypcet.edu",
+      "socialLinks": {
+        "instagram": "cultural_dypcet",
+        "facebook": "culturalclub_dypcet"
+      },
+      "events": [
+        "Annual Cultural Fest",
+        "Dance Workshop",
+        "Art Exhibition"
+      ],
+      "achievements": [
+        "Best Cultural Performance 2023",
+        "Most Active Club Award"
+      ],
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Robotics Club",
+      "description": "Building the future through robotics",
+      "fullDescription": "Our club focuses on designing, building, and programming robots. We participate in national and international robotics competitions and host workshops to inspire the next generation of innovators.",
+      "members": 10,
+      "type": "technical",
+      "isActive": true,
+      "leadName": "Alex Brown",
+      "leadEmail": "alex.brown@dypcet.edu",
+      "socialLinks": {
+        "instagram": "robotics_dypcet",
+        "linkedin": "robotics-dypcet"
+      },
+      "events": [
+        "Robo Race",
+        "AI and Robotics Workshop",
+        "Tech Expo 2024"
+      ],
+      "achievements": [
+        "Winner of National Robotics Challenge 2023",
+        "Developed 5+ innovative prototypes"
+      ],
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Keynote",
+      "description": "A haven for book lovers and writers",
+      "fullDescription": "We provide a platform for students to explore and showcase their literary talents. Our activities include book discussions, creative writing workshops, and poetry slams.",
+      "members": 8,
+      "type": "non-technical",
+      "isActive": true,
+      "leadName": "Emily Clark",
+      "leadEmail": "emily.clark@dypcet.edu",
+      "socialLinks": {
+        "instagram": "literary_dypcet",
+        "facebook": "literaryclub_dypcet"
+      },
+      "events": [
+        "Poetry Slam",
+        "Book Fair",
+        "Creative Writing Contest"
+      ],
+      "achievements": [
+        "Published a student anthology",
+        "Hosted 5+ literary events"
+      ],
+      "images": [
+        "/api/placeholder/400/300",
+        "/api/placeholder/400/300"
+      ]
+    }
+  ]
+}
