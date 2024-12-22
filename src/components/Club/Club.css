@@ -1,0 +1,14 @@
+.club-container {
+    height: 600vh; /* Height of the page */
+    width: 100vw; /* Full width of the screen */
+    background-color: rgba(12, 12, 29, 0.8); /* Matching the navbar color */
+    margin: 0 auto; /* Center the container horizontally */
+    padding-top: 100px; /* Adjust content to start below the navbar */
+  }
+  
+  .club-container h1 {
+    text-align: center;
+    color: white;
+    font-size: 74px;
+  }
+  

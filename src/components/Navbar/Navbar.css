@@ -1,0 +1,118 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px; /* Consistent navbar height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Reduced padding for better responsiveness */
+    z-index: 1000;
+    background: rgba(12, 12, 29, 0.8); /* Glassmorphism effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    box-sizing: border-box; /* Ensures padding and width are managed correctly */
+    overflow: hidden;
+  }
+  
+  .navbar .logo .nav-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .navbar .logo .nav-link .logo-image {
+    width: 60px; /* Circle size */
+    height: 60px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Image fits perfectly */
+    overflow: hidden; /* Hides overflowing content */
+  }
+  
+  .navbar .menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    z-index: 1100;
+  }
+  
+  .navbar .menu-icon.open .bar {
+    background-color: #ff6f00;
+  }
+  
+  .navbar .menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar .menu-icon.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .navbar .menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .navbar .menu-icon.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .navbar .nav-items {
+    display: flex;
+    gap: 20px; /* Adjusted gap for better layout */
+  }
+  
+  .navbar .nav-items .nav-link {
+    font-size: 1.1rem;
+    color: lightgrey;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s;
+    white-space: nowrap; /* Prevents text from wrapping */
+  }
+  
+  .navbar .nav-items .nav-link:hover {
+    color: white;
+    transform: scale(1.1);
+  }
+  
+  .navbar .nav-items .nav-link.active {
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar .menu-icon {
+      display: flex;
+    }
+  
+    .navbar .nav-items {
+      position: absolute;
+      top: 100px;
+      right: 0;
+      width: 100%;
+      height: calc(100vh - 100px);
+      background-color: rgba(12, 12, 29, 0.95);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+  
+    .navbar .nav-items.active {
+      transform: translateX(0);
+    }
+  
+    .navbar .nav-items .nav-link {
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+  
