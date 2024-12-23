@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
-// import logo from "../../assets/Logo_processed.png"; // Adjust the path based on your project structure
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -20,7 +19,11 @@ const Navbar = () => {
         transition={{ duration: 0.5 }}
       >
         <NavLink to="/" className="nav-link">
-          <img src= "https://img.freepik.com/free-photo/3d-cartoon-coffee-cup_23-2151751998.jpg?size=626&ext=jpg" alt="Logo" className="logo-image" />
+          <img
+            src="https://img.freepik.com/free-photo/3d-cartoon-coffee-cup_23-2151751998.jpg?size=626&ext=jpg"
+            alt="Logo"
+            className="logo-image"
+          />
         </NavLink>
       </motion.div>
 
@@ -47,4 +50,5 @@ const Navbar = () => {
     </nav>
   );
 };
+
 export default Navbar;
