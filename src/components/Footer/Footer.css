@@ -6,7 +6,7 @@
   }
   
   .footer {
-    background-color: #0c0c1d; /* Dark background for contrast */
+    background-color: rgba(12, 12, 29, 0.8);     /* Dark background for contrast */
     color: #d3d3d3; /* Light gray text */
     padding: 20px 10px;
     text-align: center;
