@@ -44,7 +44,7 @@ const ClubList = () => {
   return (
     <div className="club-container">
       <div className="club-content">
-        <h1>Discover DYPCET Clubs</h1>
+        <h1>Discover IIIT Sricity Clubs</h1>
         <p className="club-subtitle">Where Passion Meets Purpose</p>
         
         <div className="search-filter-container">
