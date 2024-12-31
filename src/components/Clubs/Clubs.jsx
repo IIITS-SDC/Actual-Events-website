@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, Routes, Route, useParams } from 'react-router-dom';
 import { Search, Filter, Instagram, Linkedin, Github, Facebook, Mail } from 'lucide-react';
 import clubData from '../../data/club_data.json';
-import './Club.css';
+import './Clubs.css';
 
 const ClubCard = ({ club }) => {
   const navigate = useNavigate();
