@@ -1,0 +1,14 @@
+{
+   "Events" : [
+        {
+            "id" : 1,
+            "title" : "name of the event",
+            "club_id" : "this will be associated with a club do't worry about it",
+            "desc" : "description of the event pretty strait forward don'nt make it too long ",
+            "date" : "010125",
+            "datename" : "1 st jan",
+            "eventpic" : "url of the image hosted on the static server"
+        }
+        
+   ]
+}
