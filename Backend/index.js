@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 import userRoute from "./route/user.route.js";
 import cors from "cors";
 import clubRoute from "./route/club.route.js";
+import eventRoute from "./route/event.route.js";
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -41,6 +42,7 @@ mongoose
 // Routes
 app.use("/api/user", userRoute);
 app.use("/api/club", clubRoute);
+app.use("/api/event", eventRoute);
 
 // Start Server
 app.listen(PORT, () => {
