@@ -1,13 +1,155 @@
 .home-container {
-    height: 600vh; /* Height of the page */
-    width: 100vw; /* Half the width of the screen */
-    background-color: rgba(12, 12, 29, 0.8); /* Matching the navbar color */
-    margin: 0 auto;
-    padding-top: 100px; /* Center the container horizontally */
+  position: relative;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #0a0a1f;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #cccccc;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  color: white;
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  color: #cccccc;
+  font-size: 1.25rem;
+  max-width: 800px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+}
+
+.button-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.primary-button, .secondary-button {
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary-button {
+  background-color: white;
+  color: #0a0a1f;
+}
+
+.primary-button:hover {
+  background-color: #f0f0f0;
+}
+
+.secondary-button {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.shooting-star {
+  position: absolute;
+  width: 3px; /* Slightly smaller for better performance */
+  height: 3px;
+  background-color: white;
+  border-radius: 50%;
+  animation: shoot linear infinite;
+  opacity: 0; /* Start invisible */
+  animation-fill-mode: forwards; /* Maintain final state */
+}
+
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px; /* Shorter trail for faster animation */
+  height: 1px;
+  background: linear-gradient(90deg, white, transparent);
+  opacity: 0.5;
+}
+
+/* Modified animation with faster start */
+@keyframes shoot {
+  0% {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
   }
-  .home-container h1 {
-    text-align: center;
-    color: white;
-    
-    font-size: 74px;
+  15% { /* Added intermediate step for quicker fade in */
+    opacity: 1;
   }
+  100% {
+    transform: translate(-150px, 150px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* Add a new class for initial stars */
+.shooting-star:nth-child(-n+10) {
+  animation-delay: 0s !important; /* Force immediate start for first 10 stars */
+}
+
+/* Stagger remaining stars */
+.shooting-star:nth-child(n+11) {
+  animation-delay: calc(0.1s * var(--n)) !important;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}
+
