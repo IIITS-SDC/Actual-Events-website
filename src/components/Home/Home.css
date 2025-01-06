@@ -7,7 +7,6 @@
   font-family: Arial, sans-serif;
 }
 
-
 .logo {
   width: 48px;
   height: 48px;
@@ -34,10 +33,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 80vh;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  min-height: 100vh;
   text-align: center;
-  padding: 0 1rem;
+  padding: 6rem 1rem; /* Added top padding */
   position: relative;
   z-index: 2;
 }
@@ -47,6 +46,7 @@
   font-size: 3.5rem;
   font-weight: bold;
   margin-bottom: 1.5rem;
+  margin-top: 2rem; /* Added margin-top */
 }
 
 .description {
@@ -60,6 +60,7 @@
 .button-container {
   display: flex;
   gap: 1.5rem;
+  margin-bottom: 4rem; /* Increased margin bottom */
 }
 
 .primary-button, .secondary-button {
@@ -88,15 +89,63 @@
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Carousel Styles */
+.carousel-container {
+  width: 90%;
+  max-width: 1000px; /* Increased max-width */
+  margin-top: 2rem; /* Added margin-top */
+}
+
+.carousel-slide {
+  padding: 0 10px;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Slick Carousel Customization */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+}
+
+.slick-prev {
+  left: -45px;
+}
+
+.slick-next {
+  right: -45px;
+}
+
+.slick-dots {
+  bottom: -40px; /* Moved dots further down */
+}
+
+.slick-dots li button:before {
+  color: white;
+  font-size: 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white;
+}
+
+/* Shooting Star Styles */
 .shooting-star {
   position: absolute;
-  width: 3px; /* Slightly smaller for better performance */
+  width: 3px;
   height: 3px;
   background-color: white;
   border-radius: 50%;
   animation: shoot linear infinite;
-  opacity: 0; /* Start invisible */
-  animation-fill-mode: forwards; /* Maintain final state */
+  opacity: 0;
+  animation-fill-mode: forwards;
 }
 
 .shooting-star::before {
@@ -104,19 +153,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px; /* Shorter trail for faster animation */
+  width: 50px;
   height: 1px;
   background: linear-gradient(90deg, white, transparent);
   opacity: 0.5;
 }
 
-/* Modified animation with faster start */
 @keyframes shoot {
   0% {
     transform: translate(0, 0) rotate(-45deg);
     opacity: 1;
   }
-  15% { /* Added intermediate step for quicker fade in */
+  15% {
     opacity: 1;
   }
   100% {
@@ -125,19 +173,14 @@
   }
 }
 
-/* Add a new class for initial stars */
-.shooting-star:nth-child(-n+10) {
-  animation-delay: 0s !important; /* Force immediate start for first 10 stars */
-}
-
-/* Stagger remaining stars */
-.shooting-star:nth-child(n+11) {
-  animation-delay: calc(0.1s * var(--n)) !important;
-}
-
 @media (max-width: 768px) {
+  .main-content {
+    padding: 2rem 1rem;
+  }
+
   .title {
     font-size: 2.5rem;
+    margin-top: 1rem;
   }
 
   .description {
@@ -146,10 +189,19 @@
 
   .button-container {
     flex-direction: column;
+    margin-bottom: 3rem;
   }
 
-  .nav-links {
-    gap: 1rem;
+  .carousel-slide {
+    height: 300px; /* Adjusted height for mobile */
+  }
+
+  .carousel-slide img {
+    height: 300px; /* Adjusted height for mobile */
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
   }
 }
-
