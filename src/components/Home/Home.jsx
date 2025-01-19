@@ -47,6 +47,7 @@ function Home() {
 
   return (
     <div className="home-container">
+    
       {/* Shooting Stars */}
       {[...Array(50)].map((_, i) => (
         <ShootingStar key={i} />

@@ -6,6 +6,12 @@ import userRoute from "./route/user.route.js";
 import cors from "cors";
 import clubRoute from "./route/club.route.js";
 import eventRoute from "./route/event.route.js";
+import blockedDateRoute from "./route/date.route.js";
+
+import path from "path";
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -33,6 +39,7 @@ app.use((req, res, next) => {
   }
   next();
 });
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 mongoose
   .connect(process.env.MONGODB_URI)
@@ -43,6 +50,7 @@ mongoose
 app.use("/api/user", userRoute);
 app.use("/api/club", clubRoute);
 app.use("/api/event", eventRoute);
+app.use("/api/date", blockedDateRoute);
 
 // Start Server
 app.listen(PORT, () => {

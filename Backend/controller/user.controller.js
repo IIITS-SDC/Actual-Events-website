@@ -5,7 +5,7 @@ import createTokenAndSaveCookie from "../jwt/generateToken.js";
 // Signup controller
 export const signup = async (req, res) => {
   try {
-    const { name, email, password, confirmpassword ,  } = req.body;
+    const { name, email, password, confirmpassword  } = req.body;
 
     // Validate required fields
     if (!name || !email || !password || !confirmpassword  ) {
@@ -97,12 +97,12 @@ export const logout = async (req, res) => {
 // Get user profile controller
 export const getUserProfile = async (req, res) => {
   try {
-    const loggedInUser = req.user._id;
-    const filteruser = await User.find({ _id: { $ne: loggedInUser } }).select(
-      "-password"
-    );
-    res.status(200).json({ users: filteruser });
+    // Retrieve all users and exclude their passwords
+    const allUsers = await User.find().select("-password");
+
+    res.status(200).json({ users: allUsers });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 };
+
