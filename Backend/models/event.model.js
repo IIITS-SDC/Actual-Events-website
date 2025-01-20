@@ -42,6 +42,7 @@ const eventSchema = mongoose.Schema(
         return determineSemester(this.date);
       },
     },
+    
     date: {
       type: Date,
       required: true,

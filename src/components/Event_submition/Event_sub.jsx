@@ -26,7 +26,9 @@ const EventForm = () => {
     // Fetch blocked dates from the server
     const fetchBlockedDates = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/api/event/blocked-dates");
+        const response = await axios.get(
+          "http://localhost:5001/api/event/blocked-dates"
+        );
         setBlockedDates(response.data.blockedDates || []);
       } catch (err) {
         console.error("Error fetching blocked dates:", err);
@@ -107,11 +109,15 @@ const EventForm = () => {
     formData.append("takenSDCPermission", takenSDCPermission);
 
     try {
-      const response = await axios.post("http://localhost:5001/api/event/events", formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
+      const response = await axios.post(
+        "http://localhost:5001/api/event/events",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      );
 
       setLoading(false);
 
@@ -151,7 +157,10 @@ const EventForm = () => {
 
         <div className="form-group semester-group">
           <label>Semester</label>
-          <div className="semester-options" style={{ display: "flex", gap: "20px" }}>
+          <div
+            className="semester-options"
+            style={{ display: "flex", gap: "20px" }}
+          >
             <label>
               <input
                 type="checkbox"
@@ -207,7 +216,11 @@ const EventForm = () => {
             value={eventType}
             onChange={handleChange}
             required
-            style={{ width: "100%", backgroundColor: "#2b2b3d", color: "white" }}
+            style={{
+              width: "100%",
+              backgroundColor: "#2b2b3d",
+              color: "white",
+            }}
           >
             <option value="Hands-on">Hands-on</option>
             <option value="Quiz">Quiz</option>
@@ -287,7 +300,9 @@ const EventForm = () => {
             disabled={!semester}
             style={isDateBlocked(date) ? { backgroundColor: "#ccc" } : {}}
           />
-          {isDateBlocked(date) && <p className="error-message">This date is already taken.</p>}
+          {isDateBlocked(date) && (
+            <p className="error-message">This date is already taken.</p>
+          )}
         </div>
 
         <div className="form-group">
